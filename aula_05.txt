@@ -1,0 +1,5 @@
+Servidor
+	Chama Controller -> Faz todas as ações
+		Acessa Modelo -> Traz os dados
+		Direciona para a view -> Chama o HTML
+	Manda resposta para o Cliente

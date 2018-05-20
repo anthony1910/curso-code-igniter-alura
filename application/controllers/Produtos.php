@@ -1,5 +1,7 @@
 <?php
 
+defined('BASEPATH') OR exit('No direct script access allowed');
+
 class Produtos extends CI_Controller {
 
     public function index()
@@ -15,6 +17,7 @@ class Produtos extends CI_Controller {
 
         $this->load->helper("url");
         $this->load->helper("currency");
+        $this->load->helper("form");
 
         $this->load->view("produtos/index.php", $dados);
 
