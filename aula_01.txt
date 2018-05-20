@@ -1,0 +1,3 @@
+Cliente -> Servidor(Lógica do Banco e retorna Visualização)
+
+Se você quiser que o CodeIgniter use um auto-carregador do Composer , basta definir $config['composer_autoload']como TRUEou um caminho personalizado em application / config / config.php 
