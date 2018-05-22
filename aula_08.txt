@@ -3,3 +3,4 @@ CI helpers
 
 CI sessions
 	$this->session->unset_userdata("variável_de_sessao") -> Destrói uma variável de sessão
+	$this->session->set_flashdata() -> Define uma variável que dura apenas uma requisição. Interessante para mensagens de sucesso e erro

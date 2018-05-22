@@ -7,9 +7,17 @@
     <body>
         <div class="container">
             
-            <p class="alert-danger"><?php echo $this->session->flashdata("danger"); ?></p>
-            
-            <p class="alert-success"><?php echo $this->session->flashdata("success"); ?></p>
+            <?php if ($this->session->flashdata("success")): ?>
+
+            <p class="alert alert-success"><?php echo $this->session->flashdata("success"); ?></p>
+
+            <?php endif; ?>
+
+            <?php if ($this->session->flashdata("danger")): ?>
+
+            <p class="alert alert-danger"><?php echo $this->session->flashdata("danger"); ?></p>
+
+            <?php endif; ?>
 
             <h1>Produtos</h1>
             <table class="table">
@@ -24,6 +32,10 @@
             </table>
 
             <?php if ($this->session->userdata("usuario_logado")): ?>
+
+            <?php echo anchor("produtos/formulario", "Novo Produto", array(
+                "class" => "btn btn-primary"
+            )); ?>
 
             <?php echo anchor("login/logout", "Logout", array(
                 "class" => "btn btn-primary"
