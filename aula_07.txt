@@ -1,0 +1,3 @@
+CI session
+	set_userdata() -> Seta uma variável na sessão
+	userdata() -> Pega o valor de uma variável que está na sessão

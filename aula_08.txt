@@ -1,0 +1,5 @@
+CI helpers
+	anchor("href", "Título", array_de_opcoes()) -> Define um link automaticamente
+
+CI sessions
+	$this->session->unset_userdata("variável_de_sessao") -> Destrói uma variável de sessão

@@ -7,7 +7,7 @@ class Produtos extends CI_Controller {
     public function index()
     {
 
-        $this->output->enable_profiler(TRUE);
+        // $this->output->enable_profiler(TRUE);
 
         $this->load->model("produtos_model");
 
@@ -15,7 +15,7 @@ class Produtos extends CI_Controller {
 
         $dados = array("produtos" => $produtos);
 
-        $this->load->helper(array("url", "currency", "form"));
+        $this->load->helper(array("currency", "form"));
 
         $this->load->view("produtos/index.php", $dados);
 
