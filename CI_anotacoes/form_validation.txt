@@ -1,0 +1,4 @@
+form_error("nome_do_campo", "<delimitadores_de_erro>") -> Mostra erro do campo específico
+$this->form_validation->set_rules('first_name', 'lang:first_name', 'required'); -> Mostra nome "humano" de maneira traduzida, com as linguagens
+$ this->form_validation->set_error_delimiters( '<div class = "erro">' ,  '</ div>' ); -> Define os delimitadores de erro para os campos do formulário
+É possível salvar regras de validação específicas -> https://www.codeigniter.com/user_guide/libraries/form_validation.html#how-to-save-your-rules

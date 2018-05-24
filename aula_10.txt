@@ -1,0 +1,8 @@
+CI
+	$this->db->get_where("tabela", array_de_clausulas()) -> Faz o get com where automaticamente
+	$this->db->get()->result_array() -> Retorna todos os dados de uma consulta
+	$this->db->get()->row_array() -> Retorna o primeiro dado de uma consulta
+
+CI Helper
+	$this->load->helper("typography") -> Helper de tipografia, define as quebras de linha em nossos textos
+		auto_typography() -> Função que realiza a tipografia
