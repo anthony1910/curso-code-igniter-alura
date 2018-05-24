@@ -24,7 +24,8 @@
             <?php foreach ($produtos as $produto): ?>
 
                 <tr>
-                    <td><?= anchor("produtos/mostra?id={$produto['id']}", $produto['nome']); ?></td>
+                    <td><?= anchor("produtos/{$produto['id']}", $produto['nome']); ?></td>
+                    <td><?= character_limiter($produto['descricao'], 10); ?></td>
                     <td><?= numeroEmReais($produto['preco']); ?></td>
                 </tr>
 

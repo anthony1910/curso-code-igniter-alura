@@ -13,10 +13,8 @@ class Produtos extends CI_Controller {
 
     }
 
-    public function mostra()
+    public function mostra($id)
     {
-
-        $id = $this->input->get("id");
 
         $produto = $this->produtos_model->busca($id);
 

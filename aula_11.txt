@@ -1,0 +1,11 @@
+CI Helper
+	$this->load->helper('text') -> Define o número de letra que aparecem e depois adicione ... ao resto do texto
+	character_limit('string', limite_de_caracteres) -> Executa a limitação de letras
+
+CI Routes
+	application > config > routes.php -> Adicionar rotas customizadas
+	(:num) -> Aceita qualquer número
+	(:any) -> Aceita qualquer caractere
+
+CI Security
+	html_escape('string') -> Escapa as tags HTML ou JS da string. Evita injection de script

@@ -52,3 +52,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'produtos'; // Posso mudar o controller padrão que será chamado por padrão no projeto
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['produtos/(:num)'] = 'produtos/mostra/$1';

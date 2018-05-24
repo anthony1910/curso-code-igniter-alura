@@ -7,7 +7,7 @@
         <div class="container">
             <h1><?php echo $produto['nome']; ?></h1> <br/>
             Preço: <?php echo $produto['preco']; ?> <br/>
-            <?php echo auto_typography($produto['descricao']); ?> <br/>
+            <?php echo auto_typography(html_escape($produto['descricao'])); ?> <br/>
         </div>
     </body>
 </html>
