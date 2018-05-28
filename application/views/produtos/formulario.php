@@ -17,8 +17,10 @@
             "name" => "nome",
             "class" => "form-control",
             "id" => "nome",
-            "maxlength" => "255"
+            "maxlength" => "255",
+            'value' => set_value('nome', '')
         ));
+        echo form_error('nome');
 
         echo form_label("Preço", "preco");
         echo form_input(array(
@@ -26,15 +28,19 @@
             "class" => "form-control",
             "id" => "preco",
             "maxlength" => "255",
-            "type" => "number"
+            "type" => "number",
+            'value' => set_value('preco', '')
         ));
+        echo form_error('preco');
 
         echo form_label("Descrição", "descricao");
         echo form_textarea(array(
             "name" => "descricao",
             "class" => "form-control",
-            "id" => "descricao"
+            "id" => "descricao",
+            'value' => set_value('descricao', '')
         ));
+        echo form_error('descricao');
 
         echo form_button(array(
             "class" => "btn btn-primary",

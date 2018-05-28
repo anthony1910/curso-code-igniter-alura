@@ -1,0 +1,2 @@
+CI Form validation
+	$this->form_validation->set_error_delimiters('<tag_de_abertura>', '<tag_de_fechamento>'); -> Define os limitadores das tags de exibição de erro dos formulários
