@@ -1,0 +1,5 @@
+CI Form Validation
+	Customizar
+		Criar método com a validação. Adicionar o nome da função no método set_rules() com o prefixo callback_
+	Language
+		Ir até application > config > config.php, encontrar $config['language'] e adicionar nome da pasta de linguagens
