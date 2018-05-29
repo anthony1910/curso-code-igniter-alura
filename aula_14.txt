@@ -1,0 +1,11 @@
+CI Migration
+	Por padrão, não está instalado no CI. É necessário criar uma pasta para ela
+	Há duas formas de chamá-las
+		Sequential -> Números sequenciais. 001, 002, etc.
+		Timestamp -> Adiciona um timestamp YYYYMMDDHHIISS para cada migration
+	class extends CI_migration
+	$this->dbforge->
+		add_field(array_de_campos_da_tabela()) -> Adiciona campos à tabela
+		add_key('nome_da_coluna', FALSE/TRUE) -> Define a chave primária da tabela
+		create_table('nome_da_tabela') -> Cria a tabela
+		drop_table('nome_da_tabela') -> Exclui a tabela
