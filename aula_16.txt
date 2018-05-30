@@ -1,0 +1,3 @@
+CI Migration
+	$this->dbforge->add_column('nome_da_tabela', 'array_do_campo[]') -> Adiciona coluna na tabela
+	$this->dbforge->drop_column('nome_da_tabela', 'nome_da_coluna') -> Exclui uma coluna da tabela

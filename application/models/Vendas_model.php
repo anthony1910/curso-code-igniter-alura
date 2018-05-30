@@ -9,6 +9,11 @@ class Vendas_model extends CI_Model {
 
         $this->db->insert('vendas', $venda);
 
+        $this->db->update('produtos',
+            array('vendido' => 1),
+            array('id' => $venda['produto_id'])
+        );
+
     }
 
 }

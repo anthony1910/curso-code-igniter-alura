@@ -14,7 +14,9 @@ class Produtos_model extends CI_Model {
     public function buscaTodos()
     {
 
-        return $this->db->get("produtos")->result_array();
+        return $this->db->get_where('produtos', array(
+            'vendido' => 0
+        ))->result_array();
 
     }
 
