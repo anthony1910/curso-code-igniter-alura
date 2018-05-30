@@ -1,0 +1,2 @@
+CI Form
+	form_hidden('nome_do_campo', 'valor') -> Define um campo de formulário oculto
