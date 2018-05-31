@@ -1,0 +1,4 @@
+CI MySQL
+	$this->db->select('nome_da_tabela.nome_do_campo') -> Define quais campos da tabela eu quero selecionar
+	$this->db->from('nome_da_tabela') -> Define a tabela de onde eu irei começar a query. Similar ao SELECT * FROM...
+	$this->db->join('nome_da_tabela', 'query_de_join(on)') -> Define o join das tabelas e o ponto em comum entre elas
