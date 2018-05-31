@@ -44,12 +44,16 @@ class Produtos extends CI_Controller {
     public function formulario()
     {
 
+        autoriza();
+
         $this->load->view("produtos/formulario");
 
     }
 
     public function novo()
     {
+
+        $usuarioLogado = autoriza();
 
         $this->load->library('form_validation');
 
@@ -65,8 +69,6 @@ class Produtos extends CI_Controller {
 
         if ($sucesso)
         {
-
-            $usuarioLogado = $this->session->userdata('usuario_logado');
 
             $produto = array(
                 "nome" => $this->input->post("nome"),
