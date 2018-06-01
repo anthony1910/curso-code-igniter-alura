@@ -1,0 +1,2 @@
+CI Template
+	application > core -> Pasta onde crio extensões ao CI

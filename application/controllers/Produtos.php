@@ -22,7 +22,7 @@ class Produtos extends CI_Controller {
 
         $this->load->helper('typography');
 
-        $this->load->view("produtos/mostra", $dados);
+        $this->load->template("produtos/mostra", $dados);
 
     }
 
@@ -37,7 +37,7 @@ class Produtos extends CI_Controller {
 
         $this->load->helper(array("currency"));
 
-        $this->load->view("produtos/index.php", $dados);
+        $this->load->template("produtos/index", $dados);
 
     }
 
@@ -46,7 +46,7 @@ class Produtos extends CI_Controller {
 
         autoriza();
 
-        $this->load->view("produtos/formulario");
+        $this->load->template("produtos/formulario");
 
     }
 
@@ -88,7 +88,7 @@ class Produtos extends CI_Controller {
         }
         else
         {
-            $this->load->view('produtos/formulario');
+            $this->load->template("produtos/formulario");
         }
 
     }
