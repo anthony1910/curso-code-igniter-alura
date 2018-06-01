@@ -1,0 +1,14 @@
+CI Email
+	$this->load->library('email') -> Carrega a biblioteca de emails
+	$config['protocol'] = 'smtp'; -> Define o protocolo
+    $config['smtp_host'] = 'ssl://smtp.gmail.com'; -> Define o host do email
+    $config['smtp_user'] = ''; -> Define o usuário do email
+    $config['smtp_pass'] = ''; -> Senha do usuário
+    $config['charset'] = 'utf-8';
+    $config['mailtype'] = 'html';
+    $config['newline'] = '\r\n'; -> Como será as quebras de linha
+    $config['smtp_port'] = '';
+    $this->email->initialize($config); -> Inicia o email
+
+CI View
+	$this->load->view('nome_da_view', $dados, retornara_o_codigo_ou_renderizara(TRUE/FALSE)) -> Terceiro parâmetro define se o conteúdo da view vai ser retornado ou renderizado

@@ -9,7 +9,7 @@ class Vendas extends CI_Controller {
 
         $usuario = autoriza();
         
-        $this->load->model('vendas_model');
+        $this->load->model(array('vendas_model', 'produtos_model', 'usuarios_model'));
 
         $venda = array(
             'produto_id' => $this->input->post('produto_id'),
@@ -18,6 +18,32 @@ class Vendas extends CI_Controller {
         );
 
         $this->vendas_model->salvar($venda);
+
+        $this->load->library('email');
+
+        $config['protocol'] = 'smtp';
+        $config['smtp_host'] = 'ssl://smtp.gmail.com';
+        $config['smtp_user'] = '';
+        $config['smtp_pass'] = '';
+        $config['charset'] = 'utf-8';
+        $config['mailtype'] = 'html';
+        $config['newline'] = '\r\n';
+        $config['smtp_port'] = '465';
+
+        $this->email->initialize($config);
+
+        $produto = $this->produtos_model->busca($venda['produto_id']);
+
+        $vendedor = $this->usuarios_model->busca($produto['usuario_id']);
+
+        $dados = array('produto' => $produto);
+        $conteudo = $this->load->view('vendas/email', $dados, TRUE);
+
+        $this->email->from('', 'Mercado');
+        $this->email->to('');
+        $this->email->subject("Seu produto {$produto['nome']} foi vendido");
+        $this->email->message($conteudo);
+        $this->email->send();
 
         $this->session->set_flashdata('success', 'Pedido de compra efetuado com sucesso.');
 
